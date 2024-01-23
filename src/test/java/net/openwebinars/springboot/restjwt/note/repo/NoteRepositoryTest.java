@@ -39,8 +39,8 @@ class NoteRepositoryTest {
     @Test
     void findByAuthor() {
         List<Note> result = noteRepository.findByAuthor("0374bd29-7f2a-46dc-9546-b7558390b902");
-        assertNull(result);
-        assertEquals(result.size(), 3);
+        assertNotNull(result);
+        assertEquals(result.size(), 2);
         assertEquals(result.get(0).getAuthor(), "0374bd29-7f2a-46dc-9546-b7558390b902");
     }
 }

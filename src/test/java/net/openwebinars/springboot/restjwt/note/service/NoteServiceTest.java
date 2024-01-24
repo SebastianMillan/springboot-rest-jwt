@@ -55,7 +55,7 @@ class NoteServiceTest {
                 .tags(List.of("Casa"))
                 .build();
 
-        Mockito.when(noteRepository.findByAuthor(u.getId().toString())).thenReturn(new ArrayList<Note>());
+        Mockito.when(noteRepository.findByAuthor(u.getId().toString())).thenReturn(List.of(n1,n2,n3));
 
         List<NotesGroupedByTagsDto> expectedResult= List.of(
                 new NotesGroupedByTagsDto("Compra", List.of(
